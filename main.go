@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/labstack/echo/v4"
 	"net/http"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/labstack/echo/v4"
 	_ "github.com/lib/pq"
 )
 
@@ -20,7 +20,7 @@ var db *sqlx.DB
 
 func main() {
 	var err error
-	dsn := "user=yourusername password=yourpassword dbname=db_employee sslmode=disable" // Замените на свои данные
+	dsn := "user=jamal password=1234 dbname=db_employee sslmode=disable" // Замените на свои данные
 	db, err = sqlx.Connect("postgres", dsn)
 	if err != nil {
 		fmt.Println("Error connecting to database:", err)
